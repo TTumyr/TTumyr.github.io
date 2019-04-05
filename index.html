@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thk-create</title>
+    <meta name="author" content="Trond Tumyr">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="mpbody">
+    <div class="overlay"></div>
+    <header>
+        <nav class="navbar navbar-expand-sm static-top navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">thk-create</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">log in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container p-0 flex-row d-sm-flex justify-content-center align-items-start top-container">
+        <div class="overlaytopcontainer"></div>
+        <div class="container m-0 p-2 col-12 col-sm-4 col-md-3 col-lg-2">
+            <aside class="sidenav text-light">
+                <ul class="m-0 pl-3">
+                    <li class="m-0">
+                        <div class="container mb-0 p-0" id="sn-0">
+                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                <div class=""><h5>Code</h5></div>
+                                <p class="h4 ml-auto"><button class="plus" id="sn-0-plus"></button><button class="plus hidden" id="sn-0-minus"></i></button></p>
+                                <div class="container m-0 mr-1 p-2 hidden" id="sn-0-menu">
+                                    <ul class="pl-3">
+                                        <div class="container m-0 px-2">
+                                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                                <div class="sn" id="sn-0-0"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1"><h6>C++</h6>
+                                                <p class="h6 small"><button class="plus" id="sn-0-0-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-0-minus"><i class="fas fa-minus"></i></button></p>
+                                                </div>
+                                                    <ul class="sn pl-3 hidden" id="sn-0-0-menu">  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                                <div class="sn" id="sn-0-1"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1" ><h6>Javascript</h6>
+                                                <p class="h6 small"><button class="plus" id="sn-0-1-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-1-minus"><i class="fas fa-minus"></i></button></p>
+                                                </div>
+                                                    <ul class="sn pl-3 hidden" id="sn-0-1-menu">
+                                                        <li><a href="#"><p>JS Sandbox</p></a></li>
+                                                        <li><a  href="#"><p>JS logoswitcher<p></a></li>
+                                                        <li><a href="#"><p>JS project</p></a></li>
+                                                        <li><a href="#"><p>JS game</p></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                                <div class="sn" id="sn-0-2"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1"><h6>HTML &amp CSS</h6>
+                                                <p class="h6 small"><button class="plus" id="sn-0-2-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-2-minus"><i class="fas fa-minus"></i></button></p>
+                                                </div>
+                                                    <ul class="sn pl-3 hidden" id="sn-0-2-menu">
+                                                        <li><a href="robot.html"><p>CSS robot</p></a></li>    
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m-0">
+                        <div class="container m-0 p-0" id="sn-1">
+                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                <div class=""><h5>Projects</h5></div>
+                                <p class="h4 ml-auto"><button class="plus" id="sn-1-plus"><button class="plus hidden" id="sn-1-minus"></button></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m-0">
+                        <div class="container m-0 p-0" id="sn-2">
+                            <div class="row align-items-center d-flex flex-row justify-content-between">
+                                <div class=""><h5>Design</h5></div>
+                                <p class="h4 ml-auto"><button class="plus" id="sn-2-plus"><button class="plus hidden" id="sn-2-minus"></button></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="container mb-0 p-0 col-12 col-sm-8 col-md-7 col-lg-8 maincapt">
+            <div class="maincapt-overlay"></div>
+            <!-- <div class="container maincapt"> -->
+                <p class="text-white">Think</p>
+                <p class="text-white">Create</p>
+                <p class="text-white">Expand</p> 
+            <!-- </div>  -->
+        </div>
+        <div class="container mt-1 ml-0 pl-2 pr-0 col-12 d-none d-md-block col-md-2 justify-content-between align-items-right">
+                <img class="m-0 p-1 col-5" src="images/main/html5.svg" alt="html5-84x120 img">
+                <img class="p-1 col-5" src="images/main/css-5.svg" alt="css-5-84x120 logo img">
+                <img class="m-0 p-1 col-5" src="images/main/javascript.svg" alt="javascript-84x84 img">
+                <img class="m-0 p-1 col-5" src="images/main/c.svg" alt="c-84x95 img">
+                <img class="m-0 p-1 col-5" src="images/main/wordpress-icon-1.svg" alt="wordpress-icon-1-84x84 img">
+                <img class="m-0 p-1 col-5" src="images/main/php-1.svg" alt="php-1-84x44 img">
+                <img class="m-0 p-1 col-5" src="images/main/bootstrap-4.svg" alt="bootstrap-4-84x84 img">
+           
+                <!--https://via.placeholder.com/480x480-->
+        </div>
+    </div>
+    <div class="container smbox d-block d-sm-block d-md-none pb-3">
+        <div class="container p-0">
+            <div class="container m-0 pt-3 flex-row d-flex justify-content-between align-items-center" style="height: 64px;">
+                <img class="m-0 p-0 col-1" src="images/main/html5.svg" alt="html5-84x120 img">
+                <img class="m-0 p-0 col-1" src="images/main/css-5.svg" alt="css-5-84x120 img">
+                <img class="m-0 p-0 col-1" src="images/main/javascript.svg" alt="javascript-84x120-cnt img">
+                <img class="m-0 p-0 col-1" src="images/main/wordpress-icon-1.svg" alt="wordpress-icon-1-84x120-cnt img">
+                <img class="m-0 p-0 col-1" src="images/main/bootstrap-4.svg" alt="bootstrap-4-84x120-cnt img">
+                <img class="m-0 p-0 col-1" src="images/main/c.svg" alt="c-84x120-cnt img">
+                <img class="m-0 p-0 col-1" src="images/main/php-1.svg" alt="php-1-84x120-cnt img">
+            </div>
+        </div>
+    </div>        
+    <div class="container mt-5 pb-5">
+            <article class="container">
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs tabout">
+                            <li class="nav-item">
+                                <a href="#first" class="nav-link active" data-toggle="tab">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#second" class="nav-link" data-toggle="tab">Create</a>
+                            </li>
+                            <li class="nav-item sm-col-12">
+                                <a href="#fourth" class="nav-link" data-toggle="tab">Contact</a>
+                            </li>
+                            <li class="nav-item sm-col-12">
+                                <a href="#third" class="nav-link disabled" data-toggle="tab">Empty</a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content tabs">
+                            <div class="container text-light tab-pane active" id="first">
+                                <p>This is the first and static version of this site. It is based the Bootstrap 4 framework, and partly on it's jQuery module. The left navigation pane is coded in JS. Other modules used in the creation are Font Awesome and Line Awesome, as well as gfx resources from <a href="https://unsplash.com/">Unsplash</a> and <a href="https://www.pexels.com/">Pexels</a>.</p><p>This site is planned in at least two more versions, one built upon a PHP version and another one integrated into a WordPress theme. It is likely that other versions will be tested as well, like NodeJS.</p><p>The login solutions will obviously not work as this version is not connected to any type of database, or server side module.</p>
+                            </div>
+                            <div class="container text-light tab-pane fade" id="second">
+                                <p>The idea behind the navigation pane is a flexible unit which can easly be adjusted to one's needs, and to ultimately become hooked up to some sort of editor on the server side. </p><p>Even though Bootstrap 4 is used on the styling, the .js module is in itself not dependent on it.</p> <p>You can download the source code <a href="downloads/jsMenuTemplate01.txt" download>here</a>.</p>
+                                
+                            </div>
+                            <div class="container text-light tab-pane fade" id="fourth">
+                                <p>At the moment this is a private site still under development, and if you are reading this you are likely connected privately to the project. I would love to hear about your experiences with the functionality of the site, and how to improve it.</p>
+                            </div>
+                            <div class="container text-light tab-pane fade" id="third">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas enim hic tempore sequi autem saepe praesentium consequuntur esse nulla, repellendus soluta unde tempora distinctio pariatur odit maiores, debitis odio, corrupti eos mollitia veritatis magni. Quidem, mollitia, autem eligendi voluptatum ad et atque necessitatibus sit in architecto fugit suscipit temporibus commodi laudantium? Incidunt, consequuntur saepe nesciunt fuga totam voluptas magnam. Debitis amet provident mollitia voluptates, quos nemo harum in, minima ex voluptate, veritatis vero temporibus! Facere adipisci vel blanditiis nisi repudiandae nostrum omnis ratione odit officia animi quibusdam, eligendi numquam dicta corrupti impedit quos. Mollitia illo eius inventore consectetur? Itaque mollitia earum, pariatur vel doloremque non. Voluptatem facilis exercitationem sit nesciunt illum architecto debitis maxime nihil, voluptate tempore? Quod dolorum dolores voluptatibus mollitia illum ducimus nostrum commodi neque, enim esse voluptates laborum praesentium fuga? Cum et maiores reiciendis voluptatibus provident sequi excepturi nulla, cumque maxime dolores aliquid optio illo repudiandae veniam.
+                            </div>
+                            
+                        </div>
+                    </div>
+                </article>
+        </div>          
+        <footer id="foot"><script type="text/javascript">
+            document.getElementById('foot').insertAdjacentHTML('beforeend', `<div class="container-fluid m-0">&copy; 2018 - ${new Date().getFullYear()} TTumyr</div>`);
+            </script></footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script type="text/javascript" src="js/sidenav1.0.js"></script>
+</body>
+</html>
