@@ -20,9 +20,6 @@ init() {
     let x = document.getElementsByClassName(this.settings.mainClass);
     let btn = x[0].getElementsByTagName('button');
     let ul = x[0].getElementsByTagName('ul');
-    console.log(btn);
-    console.log(ul);
-    console.log(this.settings.togClass);
     for (let i=0; i < btn.length; i++) {
         if (i % 2 !== 0) {
             btn[i].classList.toggle(this.settings.togClass);
