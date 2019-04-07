@@ -41,65 +41,52 @@
     <div class="container p-0 flex-row d-sm-flex justify-content-center align-items-start top-container">
         <div class="overlaytopcontainer"></div>
         <div class="container m-0 p-2 col-12 col-sm-4 col-md-3 col-lg-2">
-            <aside class="sidenav text-light">
-                <ul class="m-0 pl-3">
-                    <li class="m-0">
-                        <div class="container mb-0 p-0" id="sn-0">
-                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                <div class=""><h5>Code</h5></div>
-                                <p class="h4 ml-auto"><button class="plus" id="sn-0-plus"></button><button class="plus hidden" id="sn-0-minus"></i></button></p>
-                                <div class="container m-0 mr-1 p-2 hidden" id="sn-0-menu">
-                                    <ul class="pl-3">
-                                        <div class="container m-0 px-2">
-                                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                                <div class="sn" id="sn-0-0"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1"><h6>C++</h6>
-                                                <p class="h6 small"><button class="plus" id="sn-0-0-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-0-minus"><i class="fas fa-minus"></i></button></p>
-                                                </div>
-                                                    <ul class="sn pl-3 hidden" id="sn-0-0-menu">  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                                <div class="sn" id="sn-0-1"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1" ><h6>Javascript</h6>
-                                                <p class="h6 small"><button class="plus" id="sn-0-1-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-1-minus"><i class="fas fa-minus"></i></button></p>
-                                                </div>
-                                                    <ul class="sn pl-3 hidden" id="sn-0-1-menu">
-                                                        <li><a href="#"><p>Sandbox</p></a></li>
-                                                        <li><a  href="#"><p>Logoswitcher<p></a></li>
-                                                        <li><a href="#"><p>Project</p></a></li>
-                                                        <li><a href="#"><p>JS game</p></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                                <div class="sn" id="sn-0-2"><div class="row align-items-center d-flex flex-row justify-content-between m-0 pr-1"><h6>HTML &amp CSS</h6>
-                                                <p class="h6 small"><button class="plus" id="sn-0-2-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-2-minus"><i class="fas fa-minus"></i></button></p>
-                                                </div>
-                                                    <ul class="sn pl-3 hidden" id="sn-0-2-menu">
-                                                        <li><a href="#"><p>CSS robot</p></a></li>    
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
+            <aside class="m-0 p-0 sidenav text-light d-flex-col justify-content-between">
+                <ul class="m-0 p-0">
+                    <li class="m-0 p-0" id="sn-0">
+                        <div class="m-0 p-0 d-flex align-items-center">
+                        <h5 class="">Code</h5>
+                        <p class="h4 ml-auto"><button class="plus" id="sn-0-plus"></button><button class="plus hidden" id="sn-0-minus"></button></p>
+                        </div>
+                        <ul class="pl-3 pr-2 hidden" id="sn-0-menu">
+                            <li class="sn" id="sn-0-0">
+                                <div class="d-flex align-items-center">
+                                    <h6>C++</h6><p class="h6 small ml-auto"><button class="plus" id="sn-0-0-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-0-minus"><i class="fas fa-minus"></i></button></p>
                                 </div>
-                            </div>
+                                <ul class="sn pl-3 hidden" id="sn-0-0-menu">  
+                                </ul>
+                            </li>
+                            <li class="sn" id="sn-0-1">
+                                <div class="d-flex align-items-center">    
+                                        <h6>Javascript</h6><p class="h6 small ml-auto"><button class="plus" id="sn-0-1-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-1-minus"><i class="fas fa-minus"></i></button></p>
+                                </div>
+                                <ul class="sn pl-2 hidden" id="sn-0-1-menu">
+                                    <li><a href="#"><p>Sandbox</p></a></li>
+                                    <li><a  href="#"><p>Logoswitcher<p></a></li>
+                                    <li><a href="#"><p>Project</p></a></li>
+                                    <li><a href="#"><p>JS game</p></a></li>
+                                </ul>
+                            </li>
+                            <li class="sn" id="sn-0-2">
+                                <div class="d-flex align-items-center"> 
+                                    <h6>HTML &amp CSS</h6><p class="h6 small ml-auto"><button class="plus" id="sn-0-2-plus"><i class="fas fa-plus" ></i></button><button class="plus hidden" id="sn-0-2-minus"><i class="fas fa-minus"></i></button></p>
+                                </div>
+                                <ul class="sn pl-3 hidden" id="sn-0-2-menu">
+                                    <li><a href="#"><p>CSS robot</p></a></li>    
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="" id="sn-1">
+                        <div class="d-flex align-items-center">
+                            <h5>Projects</h5>
+                            <p class="h4 ml-auto"><button class="plus" id="sn-1-plus"><button class="plus hidden" id="sn-1-minus"></button></p>
                         </div>
                     </li>
-                    <li class="m-0">
-                        <div class="container m-0 p-0" id="sn-1">
-                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                <div class=""><h5>Projects</h5></div>
-                                <p class="h4 ml-auto"><button class="plus" id="sn-1-plus"><button class="plus hidden" id="sn-1-minus"></button></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="m-0">
-                        <div class="container m-0 p-0" id="sn-2">
-                            <div class="row align-items-center d-flex flex-row justify-content-between">
-                                <div class=""><h5>Design</h5></div>
-                                <p class="h4 ml-auto"><button class="plus" id="sn-2-plus"><button class="plus hidden" id="sn-2-minus"></button></p>
-                            </div>
+                    <li class="" id="sn-2">
+                        <div class="d-flex align-items-center">
+                            <h5>Design</h5>
+                            <p class="h4 ml-auto"><button class="plus" id="sn-2-plus"><button class="plus hidden" id="sn-2-minus"></button></p>
                         </div>
                     </li>
                 </ul>
