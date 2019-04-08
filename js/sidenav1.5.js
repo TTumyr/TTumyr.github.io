@@ -3,23 +3,34 @@
 //2019 by Tumyr
 //
 /*This module is dependent of a CSS class defined in nav.settings. Default is .hidden. Be sure to add it to your CSS. Copy to css --> .hidden {display: none;}
-The event and the class identifier for the list can be changed in the nav.settings section.
-The setup searches for <BUTTON> in pairs and toggles between them. Also toggles the <UL> associated with the button pair.
+Elements can be changed in nav.settings.
+The setup searches for a 'button' in pairs and toggles between them. Also toggles the list associated with the button pair.
+Consider using GetByClass if you want to add other <button> or <ul> elements inside the menu.
 Please contact me if you have any questions with regards to the code.
 */
 
 let nav = {
     settings: {
         listenType: 'click',
-        mainClass: 'cnavig',
+        mainClass: 'cnavig', //this is the root element identifier
         togClass: 'hidden',
+        btnClass: 'bt-m',
+        liClass: 'ul-m',
+        btnTag: 'button',
+        liTag: 'ul',
+        getByTags: 1,
+        getByClass: 0,
     },
     
 init() {
-    //The main class identifier
+    //Main class identifier
     let x = document.getElementsByClassName(this.settings.mainClass);
-    let btn = x[0].getElementsByTagName('button');
-    let ul = x[0].getElementsByTagName('ul');
+
+    //get elements
+    btnul = this.getElemTags(x);
+    let btn = btnul[0];
+    let ul = btnul[1];
+
     for (let i=0; i < btn.length; i++) {
         if (i % 2 !== 0) {
             btn[i].classList.toggle(this.settings.togClass);
@@ -37,10 +48,21 @@ onEvent(el, el2, el3, el4) {
     if (el) {el.classList.toggle(this.settings.togClass)};
     if (el2) {el2.classList.toggle(this.settings.togClass)};
     if (el3 && el4) {el3.classList.toggle(this.settings.togClass)};
+    },
+//Retrieves elements based on settings. Class has priority over tags
+getElemTags(el) {
+    if (this.settings.getByClass === 1) {
+        let btn = el[0].getElementsByClassName(this.settings.btnClass);
+        let ul = el[0].getElementsByClassName(this.settings.liClass);
+        return [btn, ul];
+    } else if(this.settings.getByTags === 1) {
+        let btn = el[0].getElementsByTagName(this.settings.btnTag);
+        let ul = el[0].getElementsByTagName(this.settings.liTag);
+        return [btn, ul];
     }
-}
+},
+} 
 
-//initialize nav
 nav.init();
 
 
