@@ -1,6 +1,6 @@
 ///////////////////////////////////
 //Sidebar functionality module v1.5
-//2019 by Tumyr
+//2019 by TTumyr
 //
 /*This module is dependent of a CSS class defined in nav.settings. Default is .hidden. Be sure to add it to your CSS. Copy to css --> .hidden {display: none;}
 Elements can be changed in nav.settings.
@@ -19,18 +19,28 @@ let nav = {
         btnTag: 'button',
         liTag: 'ul',
         getByTags: 1,
-        getByClass: 0,
+        getByClass: 1,
     },
     
 init() {
     //Main class identifier
-    let x = document.getElementsByClassName(this.settings.mainClass);
+    let mainClass = document.getElementsByClassName(this.settings.mainClass);
 
     //get elements
-    btnul = this.getElemTags(x);
+    let token = 0;
+    let btnul = ['','',0];
+    while(btnul[2] !== 2) {
+        if(!btnul[0].length > 0 && !btnul[1].length > 0) token=btnul[2];
+        btnul = this.getElem(mainClass, token);
+    }
     let btn = btnul[0];
     let ul = btnul[1];
+    
+    this.listenInit(btn, ul);
 
+},
+//Sets up initial listeners
+listenInit(btn, ul) {
     for (let i=0; i < btn.length; i++) {
         if (i % 2 !== 0) {
             btn[i].classList.toggle(this.settings.togClass);
@@ -42,25 +52,26 @@ init() {
     }
     ul[1].classList.toggle(this.settings.togClass)
 },
-
-//The result of the event listeners when triggered
-onEvent(el, el2, el3, el4) {
-    if (el) {el.classList.toggle(this.settings.togClass)};
-    if (el2) {el2.classList.toggle(this.settings.togClass)};
-    if (el3 && el4) {el3.classList.toggle(this.settings.togClass)};
-    },
 //Retrieves elements based on settings. Class has priority over tags
-getElemTags(el) {
-    if (this.settings.getByClass === 1) {
+getElem(el, token) {
+    if (this.settings.getByClass === 1 && token === 0) {
         let btn = el[0].getElementsByClassName(this.settings.btnClass);
         let ul = el[0].getElementsByClassName(this.settings.liClass);
-        return [btn, ul];
+        if(btn.length < 1) token = 1;
+        return [btn, ul, token];
     } else if(this.settings.getByTags === 1) {
         let btn = el[0].getElementsByTagName(this.settings.btnTag);
         let ul = el[0].getElementsByTagName(this.settings.liTag);
-        return [btn, ul];
+        token = 2;
+        return [btn, ul, token];
     }
 },
+//The result of the event listeners when triggered   --(this section may need further testing for full functionality)
+onEvent(el, el2, el3, el4) {
+    if (el) el.classList.toggle(this.settings.togClass);
+    if (el2) el2.classList.toggle(this.settings.togClass);
+    if (el3) el3.classList.toggle(this.settings.togClass);
+    },
 } 
 
 nav.init();
