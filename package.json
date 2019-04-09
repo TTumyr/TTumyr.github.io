@@ -1,0 +1,24 @@
+{
+  "name": "ttumyr.github.io",
+  "version": "1.0.0",
+  "description": "packages for the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TTumyr/TTumyr.github.io.git"
+  },
+  "author": "TTumyr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TTumyr/TTumyr.github.io/issues"
+  },
+  "homepage": "https://github.com/TTumyr/TTumyr.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
