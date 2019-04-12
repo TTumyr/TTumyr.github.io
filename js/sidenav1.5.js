@@ -75,6 +75,3 @@ onEvent(el, el2, el3, el4) {
 } 
 
 nav.init();
-
-
-
