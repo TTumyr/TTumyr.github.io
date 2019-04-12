@@ -27,16 +27,33 @@ init() {
     let mainClass = document.getElementsByClassName(this.settings.mainClass);
 
     //get elements
+<<<<<<< HEAD
     let token = 0;
     let btnul = ['','',0];
     while(btnul[2] !== 2) {
         if(!btnul[0].length > 0 && !btnul[1].length > 0) token=btnul[2];
         btnul = this.getElem(mainClass, token);
+=======
+    let inget = 0;
+    let btnul;
+    while(inget !== 2) {
+        if(Array.isArray(btnul)) {
+            if(btnul[0].length > 0 && btnul[1].length > 0) {
+                inget=btnul[2];
+                break;
+            }
+            else if(!btnul[0].length > 0 && !btnul[1].length > 0) inget=btnul[2];
+        }
+        btnul = this.getElem(mainClass, inget);
+>>>>>>> e0d561b304253fca8573a594521ad80aaa095278
     }
     let btn = btnul[0];
     let ul = btnul[1];
     
+<<<<<<< HEAD
     this.listenInit(btn, ul);
+=======
+>>>>>>> e0d561b304253fca8573a594521ad80aaa095278
 
 },
 //Sets up initial listeners
@@ -52,6 +69,16 @@ listenInit(btn, ul) {
     }
     ul[1].classList.toggle(this.settings.togClass)
 },
+<<<<<<< HEAD
+=======
+
+//The result of the event listeners when triggered
+onEvent(el, el2, el3, el4) {
+    if (el) el.classList.toggle(this.settings.togClass);
+    if (el2) el2.classList.toggle(this.settings.togClass);
+    if (el3 && el4) el3.classList.toggle(this.settings.togClass);
+    },
+>>>>>>> e0d561b304253fca8573a594521ad80aaa095278
 //Retrieves elements based on settings. Class has priority over tags
 getElem(el, token) {
     if (this.settings.getByClass === 1 && token === 0) {
