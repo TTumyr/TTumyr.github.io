@@ -74,4 +74,36 @@ onEvent(el, el2, el3, el4) {
     },
 } 
 
+let formLogin = {
+
+login: document.getElementById('topNavLogin'),
+frmLogin: document.getElementById('frmLogin'),
+frmClose: document.getElementById('frmLoginClose'),
+frmWind: window,
+
+openLogin(e) {
+    //debugger;
+    this.frmLogin.classList.toggle('hidden');
+    this.frmClose.addEventListener('click', this.closeLogin.bind(this));
+    //this.frmWind.addEventListener('click', this.closeLogin.bind(this));
+},
+
+closeLogin(e){
+    //debugger;
+    /*if(e.target !== this.frmLogin && this.frmLogin.classList.contains(!'hidden')) {
+        this.frmLogin.classList.toggle('hidden');
+    } */
+
+    this.frmLogin.classList.toggle('hidden');
+    //this.frmClose.removeEventListener('click', this.closeLogin.bind(this));
+    //this.frmWind.removeEventListener('click', this.closeLogin.bind(this));
+    
+    
+},
+init(e){
+    this.login.addEventListener('click', this.openLogin.bind(this));
+},
+}
+
 nav.init();
+formLogin.init();
