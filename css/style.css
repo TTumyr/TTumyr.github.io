@@ -308,15 +308,15 @@ footer {
     /* color: white; */
 }
 
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
     color: white !important;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: red;
+:-ms-input-placeholder {
+    color: white;
  }
 ::placeholder {
     color: white !important;
-}
+} */
 
 input {
     background-color: rgba(0, 0, 0, 0) !important;
@@ -359,22 +359,4 @@ input {
 #frmRegister .input-group-text:active, .form-control:active{
     background-color: rgba(0, 0, 0, 0);
     /* color: white; */
-}
-
-::-webkit-input-placeholder {
-    color: white !important;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: red;
- }
-::placeholder {
-    color: white !important;
-}
-
-input {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
-.close:hover {
-    cursor: pointer;
 }
