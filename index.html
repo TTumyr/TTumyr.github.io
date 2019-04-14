@@ -176,7 +176,53 @@
             <button class="btn btn-sm btn-outline-light ml-auto my-2" tabindex=3>Sign in</button>
             <a href="#" class="small" tabindex=6>No account? register here</a>
         </form>
-    </div>         
+    </div>
+    <div class="container p-3 mt-0 pb-5 hidden" id="frmRegister">
+        <div class="container mb-5 mt-0 p-0">
+            <button class="mt-0 close text-white close" id="frmLoginClose">&times</button>
+        </div>
+        <form class="">
+            <div class="input-group-sm py-3">
+                <div class="input-group mb-2">
+                        <label class="input-group-text text-white">Name</label>
+                        <input class="form-control text-white" type="text" name="firstname" placeholder="First name" tabindex=1>
+                        <input class="form-control text-white" type="text" name="lasttname" placeholder="Last name" tabindex=1>
+                </div>
+                <div class="input-group mb-2">
+                        <label class="input-group-text text-white">Email</label>
+                        <input class="form-control text-white" type="text" name="email" placeholder="Email address" tabindex=3>
+                </div>
+                <div class="input-group mb-2">
+                        <label class="input-group-text text-white">Phone</label>
+                        <input class="form-control text-white" type="text" name="phone" placeholder="Phone number" tabindex=4>
+                </div>
+                <div class="input-group mb-2">
+                        <label class="input-group-text text-white">Address</label>
+                        <input class="form-control text-white" type="text" name="address" placeholder="Address" tabindex=5>
+                </div>
+                <div class="input-group mb-2">
+                        <label class="input-group-text text-white">Postal code</label>
+                        <input class="form-control text-white" type="text" name="postalCode" placeholder="Postal code" tabindex=6>
+                </div>
+                <div class="input-group mb-5">
+                        <label class="input-group-text text-white">Country</label>
+                        <input class="form-control text-white" type="text" name="country" placeholder="Country" tabindex=7>
+                </div>
+                <div class="input-group">
+                    <label class="input-group-text text-white" for="username"><i class="fas fa-user"></i></label>
+                    <input class="form-control text-white" type="text" name="username" placeholder="username" tabindex=10>
+                </div>
+            </div>
+            <div class="input-group-sm">
+                <div class="input-group">
+                    <label class="input-group-text text-white" for="password"><i class="fas fa-key"></i></label>
+                    <input class="form-control text-white" type="password" name="password" placeholder="password" tabindex=11>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-outline-light ml-auto my-2" tabindex=3>Register</button>
+            <a href="#" class="small" tabindex=12>No account? register here</a>
+        </form>
+    </div>                  
     <footer id="foot"><script type="text/javascript">
         document.getElementById('foot').insertAdjacentHTML('beforeend', `<div class="container-fluid m-0">&copy; 2018 - ${new Date().getFullYear()} TTumyr</div>`);
         </script>

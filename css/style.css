@@ -317,3 +317,48 @@ input {
 .close:hover {
     cursor: pointer;
 }
+
+#frmRegister {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    text-align: center;
+    border: double 4px white;
+}
+
+#frmRegister button {
+    display: block;
+    outline-color: rgba(0, 0, 0, 0);
+}
+
+#frmRegister .input-group-text, .form-control{
+    background-color: rgba(0, 0, 0, 0);
+    /* color: white; */
+}
+
+#frmRegister .input-group-text:active, .form-control:active{
+    background-color: rgba(0, 0, 0, 0);
+    /* color: white; */
+}
+
+::-webkit-input-placeholder {
+    color: white !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+ }
+::placeholder {
+    color: white !important;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.close:hover {
+    cursor: pointer;
+}
