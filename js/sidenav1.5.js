@@ -79,6 +79,7 @@ let formLogin = {
 
     login: document.getElementById('topNavLogin'),
     frmLogin: document.getElementById('frmLogin'),
+    frmLoginPos: document.getElementById('frmLogin').getBoundingClientRect(),
     frmClose: document.getElementById('frmLoginClose'),
     frmWind: window,
 
@@ -86,16 +87,20 @@ let formLogin = {
         if(e.target === this.login) {
             this.frmLogin.classList.toggle('hidden');
             //console.log(e.target, ' - ', this.login);
+            this.frmLoginPos = document.getElementById('frmLogin').getBoundingClientRect();
         }
         else if(e.target === this.frmClose) {
             this.frmLogin.classList.toggle('hidden');
         }
-        else if(e.target !== this.frmLogin && !this.frmLogin.classList.contains('hidden')) {
-            this.frmLogin.classList.toggle('hidden');
-        }
+        // else if(e.target > this.frmLoginPos &&!this.frmLogin.classList.contains('hidden')) {
+        //     this.frmLogin.classList.toggle('hidden');
+        //     console.log(e.target, this.frmLoginPos);
+        //     if(e.target === this.frmLogin.childNodes[1]) console.log('childNode = true');
+        // }
     },
     init(e) {
         this.frmWind.addEventListener('click', this.closeLogin.bind(this));
+        
     },
 
 }
