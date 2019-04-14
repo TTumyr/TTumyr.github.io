@@ -76,31 +76,29 @@ let nav = {
 
 //Login form controller/event listeners
 let formLogin = {
-
+    loginBox: document.getElementById('frmLoginBox'),
     login: document.getElementById('topNavLogin'),
     frmLogin: document.getElementById('frmLogin'),
     frmLoginPos: document.getElementById('frmLogin').getBoundingClientRect(),
     frmClose: document.getElementById('frmLoginClose'),
     frmWind: window,
-
+    items: document.getElementById('frmLogin').querySelectorAll('*'),
+    x: [],
     closeLogin(e) {
         if(e.target === this.login) {
-            this.frmLogin.classList.toggle('hidden');
-            //console.log(e.target, ' - ', this.login);
-            this.frmLoginPos = document.getElementById('frmLogin').getBoundingClientRect();
+            this.loginBox.classList.toggle('hidden');
+            
         }
         else if(e.target === this.frmClose) {
-            this.frmLogin.classList.toggle('hidden');
+            this.loginBox.classList.toggle('hidden');
         }
-        // else if(e.target > this.frmLoginPos &&!this.frmLogin.classList.contains('hidden')) {
-        //     this.frmLogin.classList.toggle('hidden');
-        //     console.log(e.target, this.frmLoginPos);
-        //     if(e.target === this.frmLogin.childNodes[1]) console.log('childNode = true');
-        // }
+        
+        else if(e.target === this.loginBox) {
+            this.loginBox.classList.toggle('hidden');
+        }
     },
     init(e) {
         this.frmWind.addEventListener('click', this.closeLogin.bind(this));
-        
     },
 
 }
