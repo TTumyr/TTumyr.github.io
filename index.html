@@ -157,7 +157,7 @@
     <div class="hidden" id="frmLoginBox">
     <div class="container p-3 mt-0 pb-5" id="frmLogin">
         <div class="container mb-5 mt-0 p-0">
-            <button class="mt-0 close text-white close" id="frmLoginClose">&times</button>
+            <button class="mt-0 close text-white close frmClose" id="frmLoginClose">&times</button>
         </div>
         <form class="" method="POST">
             <div class="input-group-sm py-3">
@@ -175,13 +175,14 @@
                 <a href="#" class="small"tabindex=5>forgot password</a>
             </div>
             <button type="submit" class="btn btn-sm btn-outline-light ml-auto my-2" tabindex=3>Sign in</button>
-            <a href="#" class="small" tabindex=6>No account? register here</a>
+            <a href="#" class="small" id= "toReg" tabindex=6>No account? register here</a>
         </form>
     </div>
 </div>
-    <div class="container p-3 mt-0 pb-5 hidden" id="frmRegister">
+    <div class="hidden" id="frmRegBox">
+    <div class="container p-3 mt-0 pb-5" id="frmRegister">
         <div class="container mb-5 mt-0 p-0">
-            <button class="mt-0 close text-white close" id="frmLoginClose">&times</button>
+            <button class="mt-0 close text-white close frmClose" id="frmRegClose">&times</button>
         </div>
         <form class="" methog="POST">
             <div class="input-group-sm py-3">
@@ -222,9 +223,9 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-sm btn-outline-light ml-auto my-2" tabindex=3>Register</button>
-            <a href="#" class="small" tabindex=12>No account? register here</a>
         </form>
-    </div>                  
+    </div>
+</div>                  
     <footer id="foot"><script type="text/javascript">
         document.getElementById('foot').insertAdjacentHTML('beforeend', `<div class="container-fluid m-0">&copy; 2018 - ${new Date().getFullYear()} TTumyr</div>`);
         </script>

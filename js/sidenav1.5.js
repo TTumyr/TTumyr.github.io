@@ -79,22 +79,34 @@ let formLogin = {
     loginBox: document.getElementById('frmLoginBox'),
     login: document.getElementById('topNavLogin'),
     frmLogin: document.getElementById('frmLogin'),
+    toReg: document.getElementById('toReg'),
+    regBox: document.getElementById('frmRegBox'),
     frmLoginPos: document.getElementById('frmLogin').getBoundingClientRect(),
-    frmClose: document.getElementById('frmLoginClose'),
+    frmClose: document.getElementsByClassName('frmClose'),
     frmWind: window,
     items: document.getElementById('frmLogin').querySelectorAll('*'),
-    x: [],
     closeLogin(e) {
         if(e.target === this.login) {
             this.loginBox.classList.toggle('hidden');
             
         }
-        else if(e.target === this.frmClose) {
+        else if(e.target === this.frmClose[0]) {
             this.loginBox.classList.toggle('hidden');
+        }
+        else if(e.target === this.frmClose[1]) {
+            this.regBox.classList.toggle('hidden');
         }
         
         else if(e.target === this.loginBox) {
             this.loginBox.classList.toggle('hidden');
+        }
+        else if(e.target === this.toReg) {
+            this.loginBox.classList.toggle('hidden');
+            this.regBox.classList.toggle('hidden');
+            console.log(this.regBox);
+        }
+        else if(e.target === this.regBox) {
+            this.regBox.classList.toggle('hidden');
         }
     },
     init(e) {
