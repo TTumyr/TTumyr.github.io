@@ -1,8 +1,8 @@
 ///////////////////////////////////
-//Sidebar functionality module v1.5
+//
 //2019 by TTumyr
 //
-/*This module is dependent of a CSS class defined in nav.settings. Default is .hidden. Be sure to add it to your CSS. Copy to css --> .hidden {display: none;}
+/*The nav module is dependent of a CSS class defined in nav.settings. Default is .hidden. Be sure to add it to your CSS. Copy to css --> .hidden {display: none;}
 Elements can be changed in nav.settings.
 The setup searches for a 'button' in pairs and toggles between them. Also toggles the list associated with the button pair.
 Consider using GetByClass if you want to add other <button> or <ul> elements inside the menu.
@@ -85,32 +85,43 @@ let formLogin = {
     frmClose: document.getElementsByClassName('frmClose'),
     frmWind: window,
     items: document.getElementById('frmLogin').querySelectorAll('*'),
+    method: 1,
     closeLogin(e) {
         if(e.target === this.login) {
-            this.loginBox.classList.toggle('hidden');
+            this.action(this.loginBox);
             
         }
         else if(e.target === this.frmClose[0]) {
-            this.loginBox.classList.toggle('hidden');
+            this.action(this.loginBox);
         }
         else if(e.target === this.frmClose[1]) {
-            this.regBox.classList.toggle('hidden');
+            this.action(this.regBox);
         }
         
         else if(e.target === this.loginBox) {
-            this.loginBox.classList.toggle('hidden');
+            this.action(this.loginBox);
         }
         else if(e.target === this.toReg) {
-            this.loginBox.classList.toggle('hidden');
-            this.regBox.classList.toggle('hidden');
-            console.log(this.regBox);
+            this.action(this.loginBox);
+            this.action(this.regBox);
         }
         else if(e.target === this.regBox) {
-            this.regBox.classList.toggle('hidden');
+            this.action(this.regBox);
         }
     },
-    init(e) {
-        this.frmWind.addEventListener('click', this.closeLogin.bind(this));
+    action(el) {
+        el.classList.toggle('hidden');
+    },
+    init() {
+        if (this.method === 1) {this.frmWind.addEventListener('click', this.closeLogin.bind(this));} else {
+            this.login.addEventListener('click', this.action.bind(this, this.loginBox));
+            this.loginBox.addEventListener('click', this.action.bind(this, this.loginBox));
+            this.frmClose[0].addEventListener('click', this.action.bind(this, this.loginBox));
+            this.frmClose[1].addEventListener('click', this.action.bind(this, this.regBox));
+            this.toReg.addEventListener('click', this.action.bind(this, this.regBox));
+            this.regBox.addEventListener('click', this.action.bind(this, this.regBox));
+        }
+        
     },
 
 }
