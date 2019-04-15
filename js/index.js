@@ -57,7 +57,7 @@ let nav = {
         if (this.settings.getByClass === 1 && token === 0) {
             let btn = el[0].getElementsByClassName(this.settings.btnClass);
             let ul = el[0].getElementsByClassName(this.settings.liClass);
-            if(btn.length < 1) token = 1;
+            if(btn.length < 1) {token = 1;} else {token = 2;}
             return [btn, ul, token];
         } else if(this.settings.getByTags === 1) {
             let btn = el[0].getElementsByTagName(this.settings.btnTag);
