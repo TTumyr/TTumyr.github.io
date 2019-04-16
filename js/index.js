@@ -85,7 +85,7 @@ let formLogin = {
     frmClose: document.getElementsByClassName('frmClose'),
     frmWind: window,
     items: document.getElementById('frmLogin').querySelectorAll('*'),
-    method: 1,
+    method: 0,
     closeLogin(e) {
         if(e.target === this.login) {
             this.action(this.loginBox);
@@ -109,13 +109,17 @@ let formLogin = {
             this.action(this.regBox);
         }
     },
-    action(el) {
-        el.classList.toggle('hidden');
+    action(el, el2) {
+        if(el2.target === el2.currentTarget) {
+            if(el2.target === this.toReg) {this.loginBox.classList.toggle('hidden');}
+            el.classList.toggle('hidden');
+        }
     },
+
     init() {
         if (this.method === 1) {this.frmWind.addEventListener('click', this.closeLogin.bind(this));} else {
             this.login.addEventListener('click', this.action.bind(this, this.loginBox));
-            this.loginBox.addEventListener('click', this.action.bind(this, this.loginBox));
+            this.loginBox.addEventListener('click', this.action.bind(this, this.loginBox), true);
             this.frmClose[0].addEventListener('click', this.action.bind(this, this.loginBox));
             this.frmClose[1].addEventListener('click', this.action.bind(this, this.regBox));
             this.toReg.addEventListener('click', this.action.bind(this, this.regBox));
