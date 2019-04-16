@@ -109,21 +109,21 @@ let formLogin = {
             this.action(this.regBox);
         }
     },
-    action(el, el2) {
-        if(el2.target === el2.currentTarget) {
-            if(el2.target === this.toReg) {this.loginBox.classList.toggle('hidden');}
+    action(el, el2, el3) {
+        if(el3.target === el3.currentTarget) {
+            if(el3.target === this.toReg) {el2.classList.toggle('hidden');}
             el.classList.toggle('hidden');
         }
     },
 
     init() {
         if (this.method === 1) {this.frmWind.addEventListener('click', this.closeLogin.bind(this));} else {
-            this.login.addEventListener('click', this.action.bind(this, this.loginBox));
-            this.loginBox.addEventListener('click', this.action.bind(this, this.loginBox), true);
-            this.frmClose[0].addEventListener('click', this.action.bind(this, this.loginBox));
-            this.frmClose[1].addEventListener('click', this.action.bind(this, this.regBox));
-            this.toReg.addEventListener('click', this.action.bind(this, this.regBox));
-            this.regBox.addEventListener('click', this.action.bind(this, this.regBox));
+            this.login.addEventListener('click', this.action.bind(this, this.loginBox, null));
+            this.loginBox.addEventListener('click', this.action.bind(this, this.loginBox, null));
+            this.frmClose[0].addEventListener('click', this.action.bind(this, this.loginBox, null));
+            this.frmClose[1].addEventListener('click', this.action.bind(this, this.regBox, null));
+            this.toReg.addEventListener('click', this.action.bind(this, this.regBox, this.loginBox));
+            this.regBox.addEventListener('click', this.action.bind(this, this.regBox, null));
         }
         
     },
