@@ -238,6 +238,10 @@ input {
 .close:hover {
     cursor: pointer;
 }
+.close::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 #frmRegBox {
     position: absolute;
     top:0%;
