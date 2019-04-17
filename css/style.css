@@ -362,8 +362,11 @@ input {
     .smbox {
         background-color: rgba(0, 128, 128, 0.5);
     }
-
+    #frmLogin {
+        width: 80%;
+    }
     #frmRegister {
         width: 90%;
     }
+
 }
