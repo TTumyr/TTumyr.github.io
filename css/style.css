@@ -196,7 +196,7 @@ footer {
 }
 #frmLogin {
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color:rgba(32, 15, 26, 0.95);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -249,7 +249,7 @@ input {
 
 #frmRegister {
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(32, 15, 26, 0.95);
     position: absolute;
     top: 50%;
     left: 50%;
