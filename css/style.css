@@ -77,7 +77,28 @@ footer {
     filter: opacity(80%);
     border-radius: 20px;
 }
+.topnav .navbar-brand {
+    transition: 300ms;
+}
+.topnav .navbar-brand:hover {
+    transform: scale(1.4);
+    transition: 300ms;
+}
+.topnav .nav-item {
+    transition: 300ms;
+}
+.topnav .nav-item:hover {
+    transform: scale(1.2);
+    transition: 300ms;
+}
 
+.topnav .nav-item button {
+    outline-color: rgba(0, 0, 0, 0);
+}
+
+.topnav .nav-item button:hover {
+    background-color: rgba(128, 0, 128, 0);
+}
 /* Side navigation bar items */
 .sidenav {
     width: 100%;
@@ -86,6 +107,7 @@ footer {
     min-height: 25vh;
     max-height: 25vh;
     overflow-y: auto;
+    overflow-x: hidden;
     font-weight: lighter;
 }
 
@@ -145,12 +167,14 @@ footer {
     cursor: pointer;
     font-family: LineAwesome;
     font-weight: 100;
+    transition: 100ms;
 }
 
 .plus:hover {
-    color: yellow;
     background-color: rgba(0,0,0,0);
     border: none;
+    transform: scale(1.3);
+    transition: 100ms;
 }
 .plus:active {
     border: none;
@@ -161,7 +185,9 @@ footer {
 .tabout {
     font-weight: 100;
 }
-
+.tabout .nav-link:hover {
+    color: white;
+}
 .tabout .active{
     background-color: rgba(0,0,0,0.4) !important;
     color: white !important;
@@ -196,7 +222,7 @@ footer {
 }
 #frmLogin {
     border-radius: 20px;
-    background-color:rgba(32, 15, 26, 0.95);
+    background-color:rgba(34, 23, 30, 0.95);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -253,7 +279,7 @@ input {
 
 #frmRegister {
     border-radius: 20px;
-    background-color: rgba(32, 15, 26, 0.95);
+    background-color:rgba(34, 23, 30, 0.95);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -277,6 +303,7 @@ input {
     background-color: rgba(0, 0, 0, 0);
     /* color: white; */
 }
+
 
 /*Responsive elements */
 
